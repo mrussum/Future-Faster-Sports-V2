@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Downloads - Future Faster Sports</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="resources-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Future Faster Sports">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
+                <li><a href="partnerships.html">Partnerships</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="resources-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1>Resources & Downloads</h1>
+            <p>Access exclusive guides, reports, and materials to accelerate your sports innovation journey</p>
+        </div>
+    </section>
+
+    <!-- Featured Resource -->
+    <section class="featured-resource">
+        <div class="container">
+            <div class="featured-content">
+                <div class="featured-text">
+                    <span class="badge-new">New Release</span>
+                    <h2>The Sports Innovation Ecosystem Guide 2025</h2>
+                    <p class="lead">A comprehensive guide to understanding and navigating the sports innovation landscape, from research to commercialization.</p>
+                    <ul class="features-list">
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Nine-pillar framework explained in detail
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Case studies from successful collaborations
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Practical steps for getting started
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Market insights and opportunity analysis
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openDownloadModal('ecosystem-guide')">Download Free Guide</button>
+                </div>
+                <div class="featured-image">
+                    <img src="images/ecosystem-guide-cover.jpg" alt="Ecosystem Guide" onerror="this.src='https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=800&fit=crop'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Grid -->
+    <section class="resources-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Available Resources</h2>
+                <div class="resource-filters">
+                    <button class="filter-btn active" data-filter="all">All Resources</button>
+                    <button class="filter-btn" data-filter="guides">Guides</button>
+                    <button class="filter-btn" data-filter="reports">Reports</button>
+                    <button class="filter-btn" data-filter="templates">Templates</button>
+                    <button class="filter-btn" data-filter="research">Research</button>
+                </div>
+            </div>
+
+            <div class="resources-grid">
+                <!-- Resource 1 -->
+                <div class="resource-card" data-category="guides">
+                    <div class="resource-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">PDF Guide</span>
+                        <h3>Cambridge Sports Tech Landscape 2025</h3>
+                        <p>An overview of the sports technology ecosystem in Cambridge, including key players, research institutions, and opportunities.</p>
+                        <div class="resource-meta">
+                            <span class="pages">24 pages</span>
+                            <span class="downloads">1.2k downloads</span>
+                        </div>
+                        <button class="btn-download" onclick="openDownloadModal('cambridge-landscape')">Download Now</button>
+                    </div>
+                </div>
+
+                <!-- Resource 2 -->
+                <div class="resource-card" data-category="reports">
+                    <div class="resource-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        </svg>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Industry Report</span>
+                        <h3>Partnership Opportunities Overview</h3>
+                        <p>Explore the various partnership models available through Future Faster Sports and find the right fit for your organization.</p>
+                        <div class="resource-meta">
+                            <span class="pages">16 pages</span>
+                            <span class="downloads">856 downloads</span>
+                        </div>
+                        <button class="btn-download" onclick="openDownloadModal('partnership-overview')">Download Now</button>
+                    </div>
+                </div>
+
+                <!-- Resource 3 -->
+                <div class="resource-card" data-category="guides">
+                    <div class="resource-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Student Guide</span>
+                        <h3>Student Engagement Guide</h3>
+                        <p>A comprehensive guide for students interested in sports innovation, including internship opportunities, research projects, and career paths.</p>
+                        <div class="resource-meta">
+                            <span class="pages">18 pages</span>
+                            <span class="downloads">2.1k downloads</span>
+                        </div>
+                        <button class="btn-download" onclick="openDownloadModal('student-guide')">Download Now</button>
+                    </div>
+                </div>
+
+                <!-- Resource 4 -->
+                <div class="resource-card" data-category="research">
+                    <div class="resource-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Research Framework</span>
+                        <h3>Research Collaboration Framework</h3>
+                        <p>Guidelines and best practices for academic-industry research collaborations in sports innovation.</p>
+                        <div class="resource-meta">
+                            <span class="pages">32 pages</span>
+                            <span class="downloads">645 downloads</span>
+                        </div>
+                        <button class="btn-download" onclick="openDownloadModal('research-framework')">Download Now</button>
+                    </div>
+                </div>
+
+                <!-- Resource 5 -->
+                <div class="resource-card" data-category="templates">
+                    <div class="resource-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="9"></line>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Template</span>
+                        <h3>Innovation Proposal Template</h3>
+                        <p>A structured template to help you present your sports innovation ideas effectively to stakeholders and potential partners.</p>
+                        <div class="resource-meta">
+                            <span class="pages">DOCX</span>
+                            <span class="downloads">1.5k downloads</span>
+                        </div>
+                        <button class="btn-download" onclick="openDownloadModal('proposal-template')">Download Now</button>
+                    </div>
+                </div>
+
+                <!-- Resource 6 -->
+                <div class="resource-card" data-category="reports">
+                    <div class="resource-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <div class="resource-content">
+                        <span class="resource-type">Market Analysis</span>
+                        <h3>Sports Tech Investment Trends 2025</h3>
+                        <p>Analysis of current investment trends in sports technology, including funding data, emerging sectors, and market opportunities.</p>
+                        <div class="resource-meta">
+                            <span class="pages">28 pages</span>
+                            <span class="downloads">934 downloads</span>
+                        </div>
+                        <button class="btn-download" onclick="openDownloadModal('investment-trends')">Download Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Modal -->
+    <div id="downloadModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDownloadModal()">&times;</span>
+            <h2>Download Resource</h2>
+            <p>Enter your email to receive instant access to this resource and stay updated with our latest insights.</p>
+            <form id="downloadForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="organization">Organization (Optional)</label>
+                    <input type="text" id="organization" name="organization">
+                </div>
+                <div class="form-group">
+                    <label for="role">Your Role</label>
+                    <select id="role" name="role">
+                        <option value="">Select...</option>
+                        <option value="researcher">Researcher</option>
+                        <option value="student">Student</option>
+                        <option value="investor">Investor</option>
+                        <option value="sports-professional">Sports Professional</option>
+                        <option value="entrepreneur">Entrepreneur</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes" checked>
+                        Subscribe to our newsletter for sports innovation insights
+                    </label>
+                </div>
+                <input type="hidden" id="resourceId" name="resource_id">
+                <input type="hidden" name="_subject" value="Resource Download Request">
+                <input type="hidden" name="form_type" value="resource_download">
+                <button type="submit" class="btn btn-primary">Get Instant Access</button>
+            </form>
+            <p class="privacy-note">We respect your privacy. Your information will never be shared with third parties.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Future Faster Sports</h3>
+                    <p>Accelerating innovation in sports through research, partnerships, and ecosystem building.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="linkedin-icon.svg" alt="LinkedIn"></a>
+                        <a href="#"><img src="twitter-icon.svg" alt="Twitter"></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="innovation.html">Innovation Framework</a></li>
+                        <li><a href="partnerships.html">Partnerships</a></li>
+                        <li><a href="team.html">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="researcher-form.html">For Researchers</a></li>
+                        <li><a href="investor-form.html">For Investors</a></li>
+                        <li><a href="partner-form.html">For Partners</a></li>
+                        <li><a href="student-form.html">For Students</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Future Faster Sports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="resources-modal.js"></script>
+</body>
+</html>

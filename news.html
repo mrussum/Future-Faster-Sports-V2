@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates | Future Faster Sports</title>
+    <meta name="description" content="Latest news, updates, and insights from Future Faster Sports and the Cambridge sports innovation ecosystem.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for news page */
+        .page-hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .page-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .news-filter {
+            background: var(--white);
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--ultra-light);
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--light-gray);
+            background: var(--white);
+            border-radius: var(--radius-md);
+            font-weight: var(--font-weight-semibold);
+            color: var(--dark-gray);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .featured-article {
+            padding: 4rem 0;
+        }
+
+        .article-featured {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .article-featured-image {
+            position: relative;
+            height: 500px;
+        }
+
+        .article-featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-featured-content {
+            padding: 3rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-category {
+            font-weight: var(--font-weight-bold);
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+        }
+
+        .article-date {
+            color: var(--medium-gray);
+            font-size: 0.875rem;
+        }
+
+        .article-excerpt h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-excerpt ul {
+            margin-left: 2rem;
+            list-style: disc;
+            margin-bottom: 1rem;
+        }
+
+        .article-excerpt li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-share {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--ultra-light);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .share-btn {
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            font-weight: var(--font-weight-semibold);
+            transition: all var(--transition-fast);
+        }
+
+        .share-btn.twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+
+        .share-btn.linkedin {
+            background: #0077B5;
+            color: white;
+        }
+
+        .share-btn.email {
+            background: var(--dark-gray);
+            color: white;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .article-image {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .article-card:hover .article-image img {
+            transform: scale(1.05);
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .category-badge.partnerships {
+            background: var(--secondary-color);
+        }
+
+        .category-badge.research {
+            background: var(--accent-orange);
+        }
+
+        .category-badge.events {
+            background: #9B59B6;
+        }
+
+        .article-content {
+            padding: 1.5rem;
+        }
+
+        .read-time {
+            color: var(--medium-gray);
+        }
+
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .article-content p {
+            font-size: 0.9375rem;
+            color: var(--medium-gray);
+            margin-bottom: 0.75rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: var(--font-weight-semibold);
+            font-size: 0.9375rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .load-more-section {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .newsletter-signup {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            padding: 4rem 0;
+        }
+
+        .newsletter-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .newsletter-text h2 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .newsletter-text p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.125rem;
+        }
+
+        .newsletter-form-inline {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .newsletter-form-inline input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+        }
+
+        .newsletter-form-inline button {
+            padding: 1rem 2rem;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .article-featured-content {
+                padding: 2rem;
+            }
+
+            .newsletter-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .newsletter-form-inline {
+                flex-direction: column;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Future Faster Sports" class="logo-img">
+                        <span class="logo-text">Future Faster Sports</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="innovation.html">Innovation</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="news.html" class="active">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html" class="btn-nav">Get Involved</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <span class="section-tag">Latest Updates</span>
+                <h1>News & Insights</h1>
+                <p class="lead-text">Stay informed about the latest developments in sports innovation, our partnerships, research breakthroughs, and ecosystem growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="news-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All News</button>
+                <button class="filter-btn" data-category="company">Company News</button>
+                <button class="filter-btn" data-category="partnerships">Partnerships</button>
+                <button class="filter-btn" data-category="research">Research</button>
+                <button class="filter-btn" data-category="events">Events</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article" id="launch">
+        <div class="container">
+            <article class="article-featured">
+                <div class="article-featured-image">
+                    <img src="images/news-launch-featured.jpg" alt="Future Faster Sports Launch">
+                    <span class="news-badge">Featured</span>
+                </div>
+                <div class="article-featured-content">
+                    <div class="article-meta">
+                        <span class="article-category">Company News</span>
+                        <span class="article-date">February 9, 2025</span>
+                    </div>
+                    <h2>Future Faster Sports Launches in Cambridge: Building the Premier Sports Innovation Ecosystem</h2>
+                    <div class="article-excerpt">
+                        <p><strong>Cambridge, UK</strong> - Today marks a significant milestone in the sports innovation landscape with the official launch of Future Faster Sports (FFS), a groundbreaking ecosystem designed to connect world-class research, cutting-edge technology, and sports organizations to accelerate athletic advancement.</p>
+                        
+                        <p>"We're creating something truly unique," says Joseph Keady, Founder and CEO of Future Faster Sports. "Cambridge is already recognized as a global hub for innovation across numerous sectors. Now, we're bringing that same level of excellence and collaboration to the world of sports."</p>
+                    </div>
+                    <div class="article-share">
+                        <span>Share this article:</span>
+                        <div class="share-buttons">
+                            <a href="https://twitter.com/intent/tweet?text=Future%20Faster%20Sports%20Launches%20in%20Cambridge" target="_blank" class="share-btn twitter">Twitter</a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://futurefastersports.com/news" target="_blank" class="share-btn linkedin">LinkedIn</a>
+                            <a href="mailto:?subject=Future Faster Sports Launch&body=Check out this exciting news" class="share-btn email">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="news-articles">
+        <div class="container">
+            <div class="articles-grid">
+                <!-- Article 2 -->
+                <article class="article-card" data-category="partnerships">
+                    <div class="article-image">
+                        <img src="images/news-partnerships.jpg" alt="Strategic Partnerships">
+                        <span class="category-badge partnerships">Partnerships</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">February 7, 2025</span>
+                            <span class="read-time">5 min read</span>
+                        </div>
+                        <h3>Strategic Partnerships with Leading Universities</h3>
+                        <p>FFS announces collaboration framework with University of Cambridge and Anglia Ruskin University.</p>
+                        <a href="#" class="read-more">Read Full Article →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card" data-category="company">
+                    <div class="article-image">
+                        <img src="images/news-framework.jpg" alt="Nine Pillars">
+                        <span class="category-badge company">Company News</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">February 5, 2025</span>
+                            <span class="read-time">8 min read</span>
+                        </div>
+                        <h3>Nine-Pillar Innovation Framework Revealed</h3>
+                        <p>Introducing our comprehensive approach to sports innovation and ecosystem development.</p>
+                        <a href="#" class="read-more">Read Full Article →</a>
+                    </div>
+                </article>
+
+                <!-- Additional articles -->
+                <article class="article-card" data-category="research">
+                    <div class="article-image">
+                        <img src="images/news-research.jpg" alt="Research">
+                        <span class="category-badge research">Research</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">February 3, 2025</span>
+                            <span class="read-time">6 min read</span>
+                        </div>
+                        <h3>Biomechanics Meets Machine Learning</h3>
+                        <p>Groundbreaking research combining biomechanics and AI for injury prevention.</p>
+                        <a href="#" class="read-more">Read Full Article →</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="events">
+                    <div class="article-image">
+                        <img src="images/news-symposium.jpg" alt="Symposium">
+                        <span class="category-badge events">Events</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">January 30, 2025</span>
+                            <span class="read-time">4 min read</span>
+                        </div>
+                        <h3>Inaugural Sports Innovation Symposium</h3>
+                        <p>Join us for our first major event bringing together the ecosystem.</p>
+                        <a href="events.html" class="read-more">Learn More →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="load-more-section">
+                <button class="btn btn-secondary btn-large">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-signup">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Informed</h2>
+                    <p>Subscribe for the latest news and insights in sports innovation.</p>
+                </div>
+                <form class="newsletter-form-inline" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Future Faster Sports">
+                        <p class="footer-tagline">Building the future of sports innovation in Cambridge</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="resources.html">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Future Faster Sports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // News filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const articles = document.querySelectorAll('.article-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.dataset.category;
+
+                articles.forEach(article => {
+                    if (category === 'all' || article.dataset.category === category) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
