@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Future Faster Sports</title>
+    <meta name="description" content="Get in touch with Future Faster Sports to explore partnership opportunities.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .contact-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Future Faster Sports" class="logo-img">
+                        <span class="logo-text">Future Faster Sports</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="innovation.html">Innovation</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html" class="btn-nav active">Get Involved</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="container">
+            <span class="section-tag">Get In Touch</span>
+            <h1>Let's Build the Future Together</h1>
+            <p class="lead-text">Whether you're a researcher, investor, sports organization, or student - we'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p>General inquiries</p>
+                    <a href="mailto:info@futurefastersports.com" style="color: var(--primary-color); font-weight: 600;">info@futurefastersports.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🤝</div>
+                    <h3>Partnerships</h3>
+                    <p>Partnership opportunities</p>
+                    <a href="mailto:partnerships@futurefastersports.com" style="color: var(--primary-color); font-weight: 600;">partnerships@futurefastersports.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">🔬</div>
+                    <h3>For Researchers</h3>
+                    <p>Research collaboration</p>
+                    <a href="researcher-form.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Apply Here</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">💼</div>
+                    <h3>For Investors</h3>
+                    <p>Investment opportunities</p>
+                    <a href="investor-form.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 4rem 0; background: var(--ultra-light);">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Send Us a Message</h2>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="role">I am a... *</label>
+                            <select id="role" name="role" required>
+                                <option value="">Select your role</option>
+                                <option value="researcher">Researcher</option>
+                                <option value="investor">Investor</option>
+                                <option value="sports-org">Sports Organization</option>
+                                <option value="student">Student</option>
+                                <option value="startup">Startup Founder</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Future Faster Sports">
+                        <p class="footer-tagline">Building the future of sports innovation in Cambridge</p>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Future Faster Sports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
