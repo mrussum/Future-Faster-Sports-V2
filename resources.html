@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources & Downloads - Future Faster Sports</title>
+    <title>Resources & Downloads - Faster Future Sports</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="resources-styles.css">
 </head>
@@ -11,23 +11,28 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Future Faster Sports">
-            </a>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="innovation.html">Innovation</a></li>
-                <li><a href="partnerships.html">Partnerships</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="resources.html" class="active">Resources</a></li>
-                <li><a href="events.html">Events</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html" aria-label="Faster Future Sports home">
+                        <img src="images/logo-trimmed.png" alt="Faster Future Sports" class="logo-img">
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="innovation.html">Innovation</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="partnerships.html">Partnerships</a></li>
+                    <li><a href="resources.html" class="active">Resources</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html" class="btn-nav">Get Involved</a></li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -54,7 +59,7 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
-                            Nine-pillar framework explained in detail
+                            Six core technology domains explained in detail
                         </li>
                         <li>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
@@ -78,7 +83,7 @@
                     <button class="btn btn-primary" onclick="openDownloadModal('ecosystem-guide')">Download Free Guide</button>
                 </div>
                 <div class="featured-image">
-                    <img src="images/ecosystem-guide-cover.jpg" alt="Ecosystem Guide" onerror="this.src='https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=800&fit=crop'">
+                    <img src="images/cambridge-college.jpg" alt="Ecosystem Guide">
                 </div>
             </div>
         </div>
@@ -129,7 +134,7 @@
                     <div class="resource-content">
                         <span class="resource-type">Industry Report</span>
                         <h3>Partnership Opportunities Overview</h3>
-                        <p>Explore the various partnership models available through Future Faster Sports and find the right fit for your organization.</p>
+                        <p>Explore the various partnership models available through Faster Future Sports and find the right fit for your organization.</p>
                         <div class="resource-meta">
                             <span class="pages">16 pages</span>
                             <span class="downloads">856 downloads</span>
@@ -270,46 +275,54 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Future Faster Sports</h3>
-                    <p>Accelerating innovation in sports through research, partnerships, and ecosystem building.</p>
-                    <div class="social-links">
-                        <a href="#"><img src="linkedin-icon.svg" alt="LinkedIn"></a>
-                        <a href="#"><img src="twitter-icon.svg" alt="Twitter"></a>
+                <div class="footer-column footer-brand">
+                    <a href="index.html" class="footer-wordmark">Faster<span>Future</span>Sports</a>
+                    <p class="footer-tagline">Building the future of sport, from Cambridge to the world.</p>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/company/faster-future-sports" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/fasterfuturesport" target="_blank" rel="noopener" aria-label="X">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
+                <div class="footer-column">
+                    <h4>Explore</h4>
                     <ul>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="innovation.html">Innovation Framework</a></li>
+                        <li><a href="innovation.html">Innovation</a></li>
                         <li><a href="partnerships.html">Partnerships</a></li>
                         <li><a href="team.html">Team</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-column">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="news.html">News</a></li>
+                        <li><a href="news.html">News &amp; Insights</a></li>
                         <li><a href="events.html">Events</a></li>
                         <li><a href="resources.html">Downloads</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-column">
                     <h4>Get Involved</h4>
                     <ul>
                         <li><a href="researcher-form.html">For Researchers</a></li>
                         <li><a href="investor-form.html">For Investors</a></li>
-                        <li><a href="partner-form.html">For Partners</a></li>
-                        <li><a href="student-form.html">For Students</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Future Faster Sports. All rights reserved.</p>
+                <p>&copy; 2025 Faster Future Sports UK Ltd. All rights reserved.</p>
+                <p class="footer-location">Cambridge, United Kingdom</p>
             </div>
         </div>
     </footer>
