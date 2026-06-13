@@ -1806,3 +1806,17 @@ section {
     font-size: 1.25rem;
     color: var(--dark);
 }
+
+/* Ecosystem note (partnerships page) */
+.partners-note {
+    text-align: center;
+    max-width: 720px;
+    margin: 2rem auto 0;
+    font-size: 0.9375rem;
+    color: var(--medium-gray);
+}
+
+.partners-note a {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-semibold);
+}
