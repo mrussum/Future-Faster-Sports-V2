@@ -188,7 +188,7 @@
 /* Team Grid */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -208,7 +208,7 @@
 }
 
 .team-image {
-    aspect-ratio: 4 / 5;
+    height: 380px;
     overflow: hidden;
     background: var(--ultra-light);
 }
@@ -254,7 +254,20 @@
     margin: 0;
 }
 
+.team-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: var(--font-weight-semibold);
+    font-size: 0.9375rem;
+    color: var(--primary-color);
+}
+
+.team-link:hover {
+    color: var(--primary-dark);
+}
+
 .team-card-join {
+    grid-column: 1 / -1;
     justify-content: center;
     background: linear-gradient(135deg, #0a1f44 0%, #0066CC 100%);
     color: var(--white);
@@ -384,5 +397,43 @@
         grid-template-columns: 1fr;
         gap: 1rem;
         text-align: center;
+    }
+}
+
+/* Founder technology list */
+.founder-tech {
+    margin: 1.5rem 0 0;
+}
+
+.founder-tech h4 {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--medium-gray);
+    margin-bottom: 0.875rem;
+}
+
+.founder-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.founder-tech-list li {
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-color);
+    background: rgba(0, 102, 204, 0.08);
+    padding: 0.45rem 0.9rem;
+    border-radius: 100px;
+}
+
+/* Team grid collapses on smaller screens */
+@media (max-width: 760px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-image {
+        height: 340px;
     }
 }
