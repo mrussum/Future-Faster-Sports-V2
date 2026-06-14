@@ -1820,3 +1820,16 @@ section {
     color: var(--primary-color);
     font-weight: var(--font-weight-semibold);
 }
+
+/* Open-to-partnership block */
+.open-partnership {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.open-partnership .lead {
+    font-size: 1.25rem;
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+}
